@@ -460,3 +460,81 @@ Processing by HistoriesController#index as HTML
 Completed 200 OK in 60ms (Views: 53.1ms | ActiveRecord: 0.5ms)
 
 
+  [1m[36mUser Load (15.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-12-13 17:20:28 -0300
+Processing by HistoriesController#index as HTML
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.3ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (0.8ms)
+Completed 500 Internal Server Error in 317ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/Users/dhidalgo/Desktop/Desafio Latam/Presencial/Semana 15 - 1/actividad029/app/views/shared/_navbar.html.erb:25: syntax error, unexpected ',', expecting ')'
+...d=( session_path(current_user), method: :delete);@output_buf...
+...                              ^):
+  
+app/views/shared/_navbar.html.erb:25: syntax error, unexpected ',', expecting ')'
+app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb__446271803672315131_70133570131360'
+Started GET "/" for 127.0.0.1 at 2018-12-13 17:22:25 -0300
+Processing by HistoriesController#index as HTML
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.4ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 88ms (Views: 66.3ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/sessions/1" for 127.0.0.1 at 2018-12-13 17:22:30 -0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aaJmJ1TyN4b7chr3fDSiQIqhJI4fLTs1wVRDwEHb7JhUeW3ayO+pAANLEiRmyFnBjgAQyeqbMX2ft2VIALXN3Q==", "id"=>"1"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-13 17:22:30 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+  Rendered shared/_navbar.html.erb (0.6ms)
+Completed 200 OK in 56ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-12-13 17:22:33 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+Completed 200 OK in 56ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-13 17:22:35 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+Completed 200 OK in 51ms (Views: 44.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-12-13 17:22:38 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.8ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+Completed 200 OK in 61ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-13 17:22:40 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.7ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+Completed 200 OK in 66ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+
+
